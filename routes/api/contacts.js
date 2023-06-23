@@ -1,10 +1,11 @@
 const express = require('express');
 const ctrl = require("../../controllers/contacts");
+const { validateBody } = require("../../middlewares");
+const { addScheme, updateFavoriteScheme } = require("../../schemes");
 
 const router = express.Router();
 
-const { validateBody } = require("../../middlewares");
-const { addScheme, updateFavoriteScheme } = require("../../schemes");
+
 
 router.get('/', ctrl.getAll);
 router.get('/:contactId', ctrl.getById);

@@ -1,8 +1,12 @@
 const { Schema, model } = require('mongoose');
-
+const { handleMongooseError } = require('../helpers');
 
 
 const contactSchema = new Schema({
+    // owner: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'user',
+    // },
     name: {
         type: String,
         required: [true, 'Set name for contact'],
@@ -19,10 +23,9 @@ const contactSchema = new Schema({
     },
 });
 
-
-
+// contactSchema.post("save", handleMongooseError);
 
 
 const Contact = model("contact", contactSchema);
 
-module.exports = Contact
+module.exports = Contact;
