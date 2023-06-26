@@ -1,7 +1,7 @@
 ## Base URL
 https://phonebook-zwbk.onrender.com
 
-## Endpoints and methods for working with users and authorization ☎️
+## Endpoints and methods for working with users and authorization 👤
 ### POST /api/users/register
 Adds (registers) new user
 Required fields for user registration:
