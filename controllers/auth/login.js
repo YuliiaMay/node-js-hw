@@ -7,6 +7,7 @@ const { SECRET_KEY } = process.env;
 
 const login = async (req, res) => {
     const { email, password } = req.body;
+    
 
     const user = await User.findOne({ email });
     if (!user) throw HttpError(401, "Email or password is wrong");
@@ -19,12 +20,12 @@ const login = async (req, res) => {
     };
 
     const token = jwt.sign(payload, SECRET_KEY, { expiresIn: "23h" });
-    
+
     res.json({
         token,
         user: {
             email: email,
-            subscription: "starter"            
+            subscription: user.subscription           
         }
     })
 }
