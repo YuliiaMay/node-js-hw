@@ -4,11 +4,11 @@ const { handleMongooseError } = require('../helpers');
 
 
 const contactSchema = new Schema({
-    // owner: {
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'user',
-    //     required: true
-    // },
+    owner: {
+        type: Schema.Types.ObjectId,
+        ref: 'user',
+        required: true
+    },
     name: {
         type: String,
         required: [true, 'Set name for contact'],
@@ -31,7 +31,6 @@ const Contact = model("contact", contactSchema);
 
 
 const addSchema = Joi.object({
-    // owner: Joi.string().required(),
     name: Joi.string().required(),
     email: Joi.string().required(),
     phone: Joi.string().required(),
