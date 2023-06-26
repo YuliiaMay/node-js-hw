@@ -23,6 +23,10 @@ const contactSchema = new Schema({
         type: Boolean,
         default: false,
     },
+    token: {
+        type: String,
+        default: "",
+    }
 });
 
 contactSchema.post('save', handleMongooseError);
