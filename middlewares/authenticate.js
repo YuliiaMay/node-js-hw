@@ -17,7 +17,7 @@ const authenticate = async (req, res, next) => {
         req.user = user;
         next();
     } catch (error) {
-        next(HttpError(401,"Unfortunately you don't have access to this data"));
+        next(HttpError(401,"Not authorized"));
     }
     
 
