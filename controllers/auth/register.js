@@ -5,7 +5,6 @@ const bcrypt = require('bcrypt')
 
 const register = async (req, res) => {
     const { email, password } = req.body;
-    console.log(password);
     const user = await User.findOne({email});
     if (user) throw HttpError(409, `Email '${email}' in use`);
 
