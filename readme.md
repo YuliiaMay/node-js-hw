@@ -1,7 +1,30 @@
 ## Base URL
 https://phonebook-zwbk.onrender.com
 
-## Endpoints and methods
+## Endpoints and methods for working with users and authorization ☎️
+### POST /api/users/register
+Adds (registers) new user
+Required fields for user registration:
+{
+    "email": "olha@email.com",
+    "password": "025-698-45-69",
+}
+
+### POST /api/users/login
+Logins user. Returns token.
+Required fields for user login:
+{
+    "email": "olha@email.com",
+    "password": "025-698-45-69",
+}
+
+### POST /api/users/logout
+Logouts user. Deletes token from DB.
+
+### GET /api/users/current
+Gets information about the current user
+
+## Endpoints and methods for working with contacts ☎️
 
 ### GET /api/contacts/
 Returns list of all the contacts
