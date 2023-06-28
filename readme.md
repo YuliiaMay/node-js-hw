@@ -1,8 +1,8 @@
 ## Base URL
-https://phonebook-zwbk.onrender.com
+https://phonebook-zwbk.onrender.com/api
 
 ## Endpoints and methods for working with users and authorization 👤
-### POST /api/users/register
+### POST /users/register
 Adds (registers) new user
 Required fields for user registration:
 {
@@ -10,7 +10,7 @@ Required fields for user registration:
     "password": "025-698-45-69",
 }
 
-### POST /api/users/login
+### POST /users/login
 Logins user. Returns token.
 Required fields for user login:
 {
@@ -18,21 +18,21 @@ Required fields for user login:
     "password": "025-698-45-69",
 }
 
-### POST /api/users/logout
+### POST /users/logout
 Logouts user. Deletes token from DB.
 
-### GET /api/users/current
+### GET /users/current
 Gets information about the current user
 
 ## Endpoints and methods for working with contacts ☎️
 
-### GET /api/contacts/
+### GET /contacts/
 Returns list of all the contacts
 
-### GET /api/contacts/{id}/
+### GET /contacts/{id}/
 Returns contact by ID
 
-### POST /api/contacts/
+### POST /contacts/
 Adds new contact
 Returns new contact
 
@@ -44,7 +44,7 @@ An example of a contact object to be added to the DB:
 }
 
 
-### PUT /api/contacts/{id}/
+### PUT /contacts/{id}/
 Find contact by ID and updates it.
 
 An example of a contact object to be added to the DB:
@@ -55,13 +55,13 @@ An example of a contact object to be added to the DB:
     "favorite": true
 }
 
-### PATCH /api/contacts/{id}/favorite/
+### PATCH /contacts/{id}/favorite/
 Find contact by ID and updates object property favorite.
 
 An example of a contact object to be added to the DB:
 {
     "favorite": true
 }
-### DELETE /api/contacts/{id}/
+### DELETE /contacts/{id}/
 Find contact by ID and delete
 
