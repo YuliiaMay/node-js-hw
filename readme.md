@@ -24,6 +24,12 @@ Logouts user. Deletes token from DB.
 ### GET /users/current
 Gets information about the current user
 
+## Endpoint and method for working with users`s avatar 📸
+### POST /users/avatars
+Updates users`s avatar
+Required fields for user registration:
+Returns AvatarURL
+
 ## Endpoints and methods for working with contacts ☎️
 
 ### GET /contacts/
