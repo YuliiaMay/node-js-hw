@@ -1,11 +1,24 @@
 const express = require('express');
 const logger = require('morgan');
 const cors = require('cors');
-require("dotenv").config();
+// const nodemailer = require('nodemailer');
+// require("dotenv").config();
+
+
+// const { META_PASSWORD } = process.env;
 
 const {contactsRouter, authRouter} = require("./routes/api");
-
 const app = express();
+
+// const nodemailerConfig = {
+//     host: "smtp.meta.ua",
+//     port: 465,
+//     secure: true,
+//     auth: {
+//         user: "may-devmail@meta.ua",
+//         pass: META_PASSWORD
+//     }
+// };
 
 const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
 
