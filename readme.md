@@ -1,6 +1,15 @@
 ## Base URL
 https://phonebook-zwbk.onrender.com/api
 
+## Endpoints and methods for working with user's virification helps to sending email👤
+### GET /verify/:verificationToken
+Switchs a status of verify field
+
+### POST /verify
+Adds (registers) new user
+Resends an email with verification link
+
+
 ## Endpoints and methods for working with users and authorization 👤
 ### POST /users/register
 Adds (registers) new user
